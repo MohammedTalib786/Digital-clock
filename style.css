@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;500&family=Open+Sans:wght@400;500;600;700;800&family=Orbitron:wght@400;500&family=Outfit:wght@200;400;700&family=Playfair+Display:wght@400;500;600&family=Poppins:wght@200;300;400;500;600&family=Raleway:ital,wght@0,200;0,300;0,400;0,600;0,800;0,900;1,700&family=Roboto:wght@300;500;700&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 16px;
+  --back: #BFC9C8;
+  --border: #3B3D3D;
+
+}
+
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 4rem;
+}
+
+.head {
+
+  font-family: josefin sans;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 5rem;
+}
+
+.head>h1 {
+  font-size: 2rem;
+}
+
+#btn {
+  background: transparent;
+  border-radius: 40px;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+}
+
+.fa-moon {
+  font-weight: 900;
+  font-size: 2.5rem;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 40px;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: white;
+}
+
+
+#clock {
+  color: black;
+  font-family: Orbitron;
+  font-size: 5rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+
+}
+
+
+@media only screen and (max-width: 320px) {
+  body {
+    padding: 0rem 3rem;
+    row-gap: 6rem;
+  }
+
+  .head {
+    flex-direction: column;
+    row-gap: 2.5rem;
+  }
+
+  .head>h1 {
+    font-size: 1.4rem;
+  }
+
+  .fa-moon {
+    font-size: 1.5rem;
+    width: 3rem;
+    height: 3rem;
+
+  }
+
+  #clock {
+    font-size: 2rem;
+  }
+
+}
+
+@media only screen and (min-width: 321px) and (max-width: 425px) {
+  body {
+    padding: 0rem 3rem;
+    row-gap: 6rem;
+  }
+
+  .head {
+    flex-direction: column;
+    row-gap: 2.5rem;
+  }
+
+  .head>h1 {
+    font-size: 1.7rem;
+  }
+
+  .fa-moon {
+    font-size: 1.5rem;
+    width: 3rem;
+    height: 3rem;
+
+  }
+
+  #clock {
+    font-size: 2.39rem;
+  }
+
+}
+
+@media only screen and (min-width: 426px) and (max-width: 600px) {
+  body {
+    padding: 0rem 3rem;
+  }
+
+  .head {
+    column-gap: 2rem
+  }
+
+  .head>h1 {
+    font-size: 1.9rem;
+  }
+
+  .fa-moon {
+    font-size: 1.5rem;
+    width: 3rem;
+    height: 3rem;
+
+  }
+
+  #clock {
+    font-size: 3.65rem;
+  }
+
+}
