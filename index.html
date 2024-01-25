@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width">
   <title>Digital Clock</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" type="png" href="assets/favicon.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -17,7 +18,28 @@
     <h1 id="title">DIGITAL CLOCK</h1>
     <button id="btn"><i class="fa-solid fa-moon"></i></button>
   </div>
-  <div id="clock"></div>
+  
+  <div id="clock">
+    <script>
+      let Ddate, Dclock, Dseconds, Dminutes, Dhours, Dm;
+      (function currentTime() {
+        Ddate = new Date();
+        Dclock = document.getElementById('clock');
+        Dseconds = Ddate.getSeconds()
+        Dminutes = Ddate.getMinutes()
+        Dhours = Ddate.getHours()
+
+        // 12 hours am pm functionality
+        // Dhours = Ddate.getHours() % 12 || 12
+        // Dm = Dhours >= 13 ? 'PM' : 'AM'
+
+        Dclock.innerHTML = `
+    ${Dhours < 10 ? '0' + Dhours : '' + Dhours} : ${Dminutes < 10 ? '0' + Dminutes : '' + Dminutes} : ${Dseconds < 10 ? '0' + Dseconds : '' + Dseconds}
+    `
+      })()
+    </script>
+  </div>
+
 
   <script src="script.js"></script>
 </body>
